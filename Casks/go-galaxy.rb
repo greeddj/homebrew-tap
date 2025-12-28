@@ -9,27 +9,27 @@ cask "go-galaxy" do
     skip "Auto-generated on release."
   end
 
-  binary "go-galaxy"
+  binary "dist/go-galaxy"
 
   on_macos do
     on_intel do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "e794a71e7d86caffccd7a93595b12a32033fcf675b4179492d1bea7af76de7db"
+      sha256 "c0216400138afee7a84a660664fc085d4935e2066f5897eee1e9ca0b20cc95c6"
     end
     on_arm do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_arm64.tar.gz"
-      sha256 "39ecd3ba901d6b168e47264abffda19dc7fcdf43eec4148377f6ba74b3a157ab"
+      sha256 "818958406476986a43614f06f486126b3785ccf7ace9843a3174da3a4207d3a2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_x86_64.tar.gz"
-      sha256 "cc90ffe0a03d06bf2adb10c6b4d1d6b1f62f46849efcd9f5fe0d49d92c948b83"
+      sha256 "a12d87e54bd22b26f2806f6bc292a21485594ea076cd694c7f9e97e18ac9bfdd"
     end
     on_arm do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_arm64.tar.gz"
-      sha256 "38e257f385c916566a64b1d3cb3488a810225836acd2aa0a745cf9757d15441d"
+      sha256 "c850f6556d35a5815fe7bd0188c8362b7ab917d00bd98e66c105f355a293888d"
     end
   end
 
