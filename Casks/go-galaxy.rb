@@ -14,28 +14,28 @@ cask "go-galaxy" do
   on_macos do
     on_intel do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "c0216400138afee7a84a660664fc085d4935e2066f5897eee1e9ca0b20cc95c6"
+      sha256 "8de2fa89de3dd761878c8dee9438242159bb684584fd52cd10de1fc57a2e93e4"
     end
     on_arm do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_arm64.tar.gz"
-      sha256 "818958406476986a43614f06f486126b3785ccf7ace9843a3174da3a4207d3a2"
+      sha256 "e891d7fa28f510b77bcf84d3afde6c1f3a87f6f0fed58ae9fbba2dc2e77a1acb"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_x86_64.tar.gz"
-      sha256 "a12d87e54bd22b26f2806f6bc292a21485594ea076cd694c7f9e97e18ac9bfdd"
+      sha256 "e8b10c41f487aa6b7c509cf80074cdc64967ce9e4710c67e414dd5395db7b8af"
     end
     on_arm do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_arm64.tar.gz"
-      sha256 "c850f6556d35a5815fe7bd0188c8362b7ab917d00bd98e66c105f355a293888d"
+      sha256 "f8a143814f7e3097f919901d86495449407e6681258b40f6178214efb9e5e3fe"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/go-galaxy"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/dist/go-galaxy"]
     end
   end
 
