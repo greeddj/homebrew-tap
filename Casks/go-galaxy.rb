@@ -3,7 +3,7 @@ cask "go-galaxy" do
   name "go-galaxy"
   desc "Fast Ansible Galaxy collections installer for CI."
   homepage "https://github.com/greeddj/go-galaxy"
-  version "1.0.1"
+  version "1.0.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "go-galaxy" do
   on_macos do
     on_intel do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "381139408e98120795fab0b640efc05a8632cba78ed07dcf35db55513a21b564"
+      sha256 "cfefa7da8d9594d814d28f62fdb8676a657873072983afa04fe560785400e40a"
     end
     on_arm do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_arm64.tar.gz"
-      sha256 "53cde2b0a1bc1d7315b6c62645312d1bed5f699de35397f270894b636ede6bbd"
+      sha256 "daff49403ab95b9cb605eebdbad1440612e57ce0f08a10e4f4633cef56bc7061"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_x86_64.tar.gz"
-      sha256 "7cadf65b48915edd3c110a4e34a10b16161a894bd91178aba9d9bb297a020dc7"
+      sha256 "70c6f4cc584aba87927b13b0983cb65e5e7a44c303669901db5a84b6bbf6882d"
     end
     on_arm do
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_arm64.tar.gz"
-      sha256 "68c49725f86f90eab80f34da5aa8b132ee7fdafbae6bab50bb842b1a55942dca"
+      sha256 "332c974c981a42828bceb0b0da1b44a6da2665d1b9360552bbfdfc591588d760"
     end
   end
 
