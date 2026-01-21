@@ -3,39 +3,39 @@ cask "imapsync-go" do
   name "imapsync-go"
   desc "IMAP to IMAP synchronization tool"
   homepage "https://github.com/greeddj/imapsync-go"
-  version "1.0.3"
+  version "1.0.4"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
-  binary "imapsync-go"
+  binary "dist/imapsync-go"
 
   on_macos do
     on_intel do
       url "https://github.com/greeddj/imapsync-go/releases/download/v#{version}/imapsync-go_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "ede1cd442f6d749bfe2ee533fdcd6db827ad4e505e7a26abe5db9d0590ea8dc0"
+      sha256 "b2b26cb6100c3393288aea60f9fa53a5971e93b2ef6ecce639714a1b4b77f798"
     end
     on_arm do
       url "https://github.com/greeddj/imapsync-go/releases/download/v#{version}/imapsync-go_#{version}_Darwin_arm64.tar.gz"
-      sha256 "fcd3bbc8b2a2d32f8c58cb8964e13f9d2a8f04d1f4cc5939d83f6082de294e23"
+      sha256 "9243cf6d48c112526e008a8ec04379de791be53488ce0cc8d2c4e7a3a7473d39"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/greeddj/imapsync-go/releases/download/v#{version}/imapsync-go_#{version}_Linux_x86_64.tar.gz"
-      sha256 "e3a4e8537c5d3c1c3263af01bc1fb08e338e944975574e4f3c048105fd657f3d"
+      sha256 "4731b0fbb21e99c860cfe24a009b1c853857bc1932bda9506c405a57fb903a67"
     end
     on_arm do
       url "https://github.com/greeddj/imapsync-go/releases/download/v#{version}/imapsync-go_#{version}_Linux_arm64.tar.gz"
-      sha256 "72f286e6ae484b6652ffa492bebaf4fd105bb141e0e30ec6ad7ba3a718f8b928"
+      sha256 "7868f23aba92135b17e7b19cfb8326c6afdf373d355edcadbdcadc7cf312cab6"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/imapsync-go"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/dist/imapsync-go"]
     end
   end
 
