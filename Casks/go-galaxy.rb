@@ -6,25 +6,25 @@ cask "go-galaxy" do
     end
   end
 
-  version "1.3.0"
+  version "1.3.1"
 
   on_macos do
     on_arm do
-      sha256 "c5bc5df69494949c476fc8f5f8f814bb9ad5691117ff1d05c9af111578e77051"
+      sha256 "2b37ddeef4e2d3a43378d9e11a483d5327a0ed2925698ffe5b5659ff08571b2c"
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "3a6a9603c1544a283a78f3c239aa83bb4d1627d68cc42e223e800ee90e8d7130"
+      sha256 "cb7af581961eaa4416d6572b193be373d071d292b14491a78d491e0d9b496e24"
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Darwin_x86_64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b12cb854c9a34a1ab29b69bc4772b58b5e303182638b59b22e8f96d401705f89"
+      sha256 "272289b08d82d7b4e5076532d3f651b68e30763f3e647cf68a7277d0febac81d"
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "dd4448566cf06926a5e8915ef7ed423c7dc0d99a929054fc3448a3e2265eccdd"
+      sha256 "305141cdc2defb74f4dc4d5edc7f13cdf7d0e1d34af840393f21c206153672c7"
       url "https://github.com/greeddj/go-galaxy/releases/download/v#{version}/go-galaxy_#{version}_Linux_x86_64.tar.gz"
     end
   end
@@ -45,6 +45,6 @@ cask "go-galaxy" do
     These builds are not Apple-notarized, so this cask clears the macOS
     quarantine attribute from the binary it installs. That skips a Gatekeeper
     check on your behalf. To verify the download instead, see
-    https://github.com/greeddj/go-galaxy/blob/v1.3.0/docs/guides/security.md#verifying-a-release
+    https://github.com/greeddj/go-galaxy/blob/v1.3.1/docs/guides/security.md#verifying-a-release
   EOS
 end
